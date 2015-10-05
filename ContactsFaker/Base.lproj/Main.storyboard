@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContactsFaker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LE3-NS-XLr">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Contacts In AddressBook:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUr-8b-4Fx">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiu-3S-qI7">
+                                        <rect key="frame" x="208" y="0.0" width="352" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vne-5Q-Inl">
+                                <rect key="frame" x="20" y="57" width="230" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tj-WO-ycg">
+                                        <rect key="frame" x="0.0" y="0.0" width="193" height="30"/>
+                                        <state key="normal" title="Generate 100 New Contacts"/>
+                                        <connections>
+                                            <action selector="get100Contacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YML-lU-Ss2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwa-Is-wRb">
+                                        <rect key="frame" x="0.0" y="40" width="203" height="30"/>
+                                        <state key="normal" title="Generate 1000 New Contacts"/>
+                                        <connections>
+                                            <action selector="get1000Contacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IyL-gM-tGJ"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uhj-UV-p1S">
+                                        <rect key="frame" x="0.0" y="80" width="230" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0B-v7-VI1">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="30"/>
+                                                <state key="normal" title="Generate New Contacts"/>
+                                                <connections>
+                                                    <action selector="getContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kU8-Qh-Ev0"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hy6-sd-PpZ">
+                                                <rect key="frame" x="174" y="0.0" width="56" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="6is-RN-Zs2"/>
+                                </constraints>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gtn-pz-4RP">
+                                <rect key="frame" x="20" y="171" width="560" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-2I-zIp">
+                                <rect key="frame" x="20" y="202" width="127" height="30"/>
+                                <state key="normal" title="Delete all contacts"/>
+                                <connections>
+                                    <action selector="onDeleteAllContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8mL-nZ-LLf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SC-QJ-3b1">
+                                <rect key="frame" x="155" y="206" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Crm-2I-zIp" firstAttribute="top" secondItem="gtn-pz-4RP" secondAttribute="bottom" constant="29" id="0ud-Z9-ZX7"/>
+                            <constraint firstItem="Crm-2I-zIp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2o9-F5-mb1"/>
+                            <constraint firstItem="LE3-NS-XLr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4c8-KU-CzM"/>
+                            <constraint firstItem="3SC-QJ-3b1" firstAttribute="centerY" secondItem="Crm-2I-zIp" secondAttribute="centerY" id="8TY-3t-Cvi"/>
+                            <constraint firstItem="vne-5Q-Inl" firstAttribute="top" secondItem="LE3-NS-XLr" secondAttribute="bottom" constant="8" id="AFi-oQ-IQ0"/>
+                            <constraint firstItem="gtn-pz-4RP" firstAttribute="top" secondItem="vne-5Q-Inl" secondAttribute="bottom" constant="4" id="Hdz-iX-hAt"/>
+                            <constraint firstItem="LE3-NS-XLr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="He5-fn-rh6"/>
+                            <constraint firstAttribute="trailing" secondItem="gtn-pz-4RP" secondAttribute="trailing" constant="20" id="KAd-4t-7bQ"/>
+                            <constraint firstItem="3SC-QJ-3b1" firstAttribute="leading" secondItem="Crm-2I-zIp" secondAttribute="trailing" constant="8" id="Uoa-CV-HOY"/>
+                            <constraint firstItem="gtn-pz-4RP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="cEE-oE-Buv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LE3-NS-XLr" secondAttribute="trailing" id="rjP-5w-6qw"/>
+                            <constraint firstItem="vne-5Q-Inl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="z6c-kI-Gei"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactsCountLabel" destination="Qiu-3S-qI7" id="yqW-uy-Mok"/>
+                        <outlet property="countTextField" destination="hy6-sd-PpZ" id="rpl-aS-Eh6"/>
+                        <outlet property="deleteStatusLabel" destination="3SC-QJ-3b1" id="qpi-hP-cnJ"/>
+                        <outlet property="progress" destination="gtn-pz-4RP" id="Yww-lZ-6eL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="444" y="375"/>
         </scene>
     </scenes>
 </document>

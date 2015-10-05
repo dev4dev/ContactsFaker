@@ -12,6 +12,7 @@
 		63E953671BC269B90018CFB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E953651BC269B90018CFB4 /* Main.storyboard */; };
 		63E953691BC269B90018CFB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E953681BC269B90018CFB4 /* Assets.xcassets */; };
 		63E9536C1BC269B90018CFB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E9536A1BC269B90018CFB4 /* LaunchScreen.storyboard */; };
+		C756E83FEE8FC62BD1014197 /* Pods_ContactsFaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01D3C644056B92F5BD62B35 /* Pods_ContactsFaker.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		63E953681BC269B90018CFB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63E9536B1BC269B90018CFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63E9536D1BC269B90018CFB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C01D3C644056B92F5BD62B35 /* Pods_ContactsFaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsFaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD15D7E1774AD463DE37E909 /* Pods-ContactsFaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsFaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsFaker/Pods-ContactsFaker.release.xcconfig"; sourceTree = "<group>"; };
+		DAC1548F3D6EF99EF522335E /* Pods-ContactsFaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsFaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsFaker/Pods-ContactsFaker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C756E83FEE8FC62BD1014197 /* Pods_ContactsFaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A95F4BA924ABCDD0408BD2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C01D3C644056B92F5BD62B35 /* Pods_ContactsFaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63E953551BC269B90018CFB4 = {
 			isa = PBXGroup;
 			children = (
 				63E953601BC269B90018CFB4 /* ContactsFaker */,
 				63E9535F1BC269B90018CFB4 /* Products */,
+				996C5AAD2A8FBB55C049F3D6 /* Pods */,
+				1A95F4BA924ABCDD0408BD2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = ContactsFaker;
 			sourceTree = "<group>";
 		};
+		996C5AAD2A8FBB55C049F3D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAC1548F3D6EF99EF522335E /* Pods-ContactsFaker.debug.xcconfig */,
+				CD15D7E1774AD463DE37E909 /* Pods-ContactsFaker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63E953701BC269B90018CFB4 /* Build configuration list for PBXNativeTarget "ContactsFaker" */;
 			buildPhases = (
+				FB5A1592D64984C017B93295 /* Check Pods Manifest.lock */,
 				63E9535A1BC269B90018CFB4 /* Sources */,
 				63E9535B1BC269B90018CFB4 /* Frameworks */,
 				63E9535C1BC269B90018CFB4 /* Resources */,
+				8D5177FD1884517925BD7C01 /* Embed Pods Frameworks */,
+				D7CF83057CBC86BDE6449EB7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D5177FD1884517925BD7C01 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactsFaker/Pods-ContactsFaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7CF83057CBC86BDE6449EB7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactsFaker/Pods-ContactsFaker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB5A1592D64984C017B93295 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63E9535A1BC269B90018CFB4 /* Sources */ = {
@@ -244,6 +319,7 @@
 		};
 		63E953711BC269B90018CFB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAC1548F3D6EF99EF522335E /* Pods-ContactsFaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactsFaker/Info.plist;
@@ -255,6 +331,7 @@
 		};
 		63E953721BC269B90018CFB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD15D7E1774AD463DE37E909 /* Pods-ContactsFaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactsFaker/Info.plist;
@@ -283,6 +360,7 @@
 				63E953721BC269B90018CFB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

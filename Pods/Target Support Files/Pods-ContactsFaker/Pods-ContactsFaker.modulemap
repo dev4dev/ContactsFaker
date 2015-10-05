@@ -1,0 +1,6 @@
+framework module Pods_ContactsFaker {
+  umbrella header "Pods-ContactsFaker-umbrella.h"
+
+  export *
+  module * { export * }
+}
